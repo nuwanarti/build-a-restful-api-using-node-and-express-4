@@ -64,6 +64,8 @@ router.route('/bears').post(function(req , res){ //create a route for localhost:
   // });
 
   // console.log(`Bear name is : ${bear.name} and the ${req.body}`);
+    
+// get , put , delete are the methods on Schema... and these methods are look after interacting with mongo db....
   bear.save(function(err){
       if (err)
         res.send(err);
@@ -106,7 +108,7 @@ router.route('/bears/:bear_id')
             if (err)
                 res.send(err);
 
-            res.json({ message: 'Successfully deleted' });
+            res.json({ message: 'deleted the bear referenced on the id' });
         });
     });
 // get request to the root of the server be prefixed with "api"
