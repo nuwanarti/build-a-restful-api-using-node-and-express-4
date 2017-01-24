@@ -6,13 +6,12 @@ var Bear     = require('./app/models/bear');
 mongoose.connect('mongodb://nuwanarti:freeznuwa@ds057176.mlab.com:57176/mymongo');
 
 
-var mongoose     = require('mongoose');
-var Schema       = mongoose.Schema;
+//var mongoose     = require('mongoose');
+//var Schema       = mongoose.Schema;
 
 var app = express(); // init express for our app... this is exactly what i was doing while creating the dictionary-api
 
-app.use(bodyParser.urlencoded({extended:true})); // configure body parser to delever us the post content..
-//extended: set to true.. coz large data chunks to be passed on post requests..
+app.use(bodyParser.urlencoded({extended:true})); // configure body parser to delever us the post content..even if the content is large enough
 app.use(bodyParser.json());
 
 var port = process.env.PORT || 8080; //setting the PORT
